@@ -25,21 +25,31 @@ output/: The folder where analysis results will be saved.
 
 Data Description
 Genotype Data (genotype_data)
-Format: PLINK binary format (files: .bed, .bim, .fam).
+Format: PLINK binary format (.bed, .bim, .fam files).
 
-Contains genetic data for individuals, with SNPs as features.
+Content: This dataset includes SNP data across simulated individuals. Each row corresponds to an individual, and each column represents a SNP. This data is used as input for both GWAS and LD analysis.
 
 Phenotype Data (pheno_data)
-Format: Tab-delimited text file.
+Format: Tab-delimited text file (.txt or .csv).
 
-Includes individual IDs and corresponding phenotype values.
+Content: The phenotype file contains phenotype information for each individual in the genotype dataset. The phenotype can be:
 
-Dichotomous traits (e.g., disease vs. control).
+Dichotomous (binary): E.g., 0 for control, 1 for disease.
 
-Quantitative traits (e.g., height, weight).
+Quantitative (continuous): E.g., measurements like height, weight, etc.
 
-Preprocessing
-SNPs that fail the HWE test (p < 1e-6) and those with high missingness (>5% for SNPs, >10% for individuals) are removed before running the analysis.
+Simulated Data
+The genotype and phenotype data used in this analysis is simulated. The data has been generated for the purpose of demonstrating and testing the GWAS and LD analysis pipeline, and may not reflect real biological data.
+
+Data Preprocessing
+HWE Test: SNPs that fail the Hardy-Weinberg equilibrium (p < 1e-6) are excluded.
+
+Missingness Filtering: SNPs with >5% missing data and individuals with >10% missing genotypes are removed.
+
+Data Considerations
+Ensure that your dataset has a sufficiently large sample size to detect meaningful associations.
+
+Consider the potential for population stratification in your dataset, which may require additional adjustment.
 
 How to Run
 Ensure that your genotype and phenotype data files are ready and in the correct format.
