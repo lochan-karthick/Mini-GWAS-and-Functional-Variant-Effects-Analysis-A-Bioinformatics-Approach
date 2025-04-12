@@ -1,0 +1,2 @@
+# Mini-GWAS-and-Functional-Variant-Effects-Analysis-A-Bioinformatics-Approach
+This bioinformatics project focuses on GWAS and functional variant effects analysis. It identifies genetic associations with multifactorial phenotypes and predicts the functional impact of selected SNPs, including missense, nonsense, and regulatory variants. Using PLINK and bioinformatics tools, the project explores complex genetic architectures.
