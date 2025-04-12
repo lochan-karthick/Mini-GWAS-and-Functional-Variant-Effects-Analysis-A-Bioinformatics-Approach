@@ -1,60 +1,57 @@
-This repository contains scripts for performing Genome-Wide Association Studies (GWAS) and Linkage Disequilibrium (LD) analysis on genotype data. The scripts are designed to analyze both dichotomous (binary) and quantitative phenotypes, with the ability to apply data filtering based on Hardy-Weinberg Equilibrium (HWE) and missingness results before running GWAS and LD analysis.
+GWAS and LD Analysis
+This repository contains scripts to perform Genome-Wide Association Studies (GWAS) and Linkage Disequilibrium (LD) analysis on genetic data. The analysis covers both dichotomous (binary) and quantitative phenotypes. The script applies filtering based on Hardy-Weinberg Equilibrium (HWE) and missingness results before running the main analyses.
 
 Prerequisites
-Before running the scripts, make sure you have the following tools installed:
-
-PLINK: A popular tool for GWAS and related genetic analyses.
-
-Installation: PLINK 1.90
+PLINK: A tool for running GWAS and LD analysis.
+(Install PLINK 1.90 from PLINK)
 
 R: Used for p-value adjustment and plotting.
+(Install R from R Project)
 
-Installation: R Project
-
-Required R Packages:
+Make sure to install the necessary R packages:
 
 qqman: For plotting Manhattan plots.
 
-ggplot2: For additional visualization if needed.
+ggplot2: For other visualizations.
 
-File Structure
-gwas_ld_analysis.sh: Bash script that runs GWAS for dichotomous and quantitative phenotypes and performs Linkage Disequilibrium (LD) analysis. It also adjusts p-values using the Bonferroni method.
+Files
+gwas_ld_analysis.sh: The main script for running GWAS and LD analysis.
 
-filtered_data_hwe: Genotype data file that has been filtered for HWE and missingness (used as input for GWAS and LD analysis).
+filtered_data_hwe: Genotype data file after HWE and missingness filtering.
 
-pheno_data: Phenotype data file (used for both dichotomous and quantitative analysis).
+pheno_data: The phenotype data for analysis.
 
-output/: Directory for storing analysis results, including GWAS results and LD blocks.
+output/: The folder where analysis results will be saved.
 
-Usage
-1. Prepare Data Files
-Genotype data: Ensure you have your genotype data in PLINK binary format (.bed, .bim, .fam files).
+Data Description
+Genotype Data (genotype_data)
+Format: PLINK binary format (files: .bed, .bim, .fam).
 
-Phenotype data: Prepare a phenotype file with the appropriate data for dichotomous or quantitative analysis.
+Contains genetic data for individuals, with SNPs as features.
 
-2. Run the Script
-After preparing your data files, you can run the analysis by executing the bash script gwas_ld_analysis.sh.
+Phenotype Data (pheno_data)
+Format: Tab-delimited text file.
 
-3. Output Files
-The script generates the following output files in the output/ directory:
+Includes individual IDs and corresponding phenotype values.
 
-GWAS results:
+Dichotomous traits (e.g., disease vs. control).
 
-gwas_dichotomous.assoc: GWAS results for the dichotomous phenotype.
+Quantitative traits (e.g., height, weight).
 
-gwas_quantitative.assoc: GWAS results for the quantitative phenotype.
+Preprocessing
+SNPs that fail the HWE test (p < 1e-6) and those with high missingness (>5% for SNPs, >10% for individuals) are removed before running the analysis.
 
-gwas_dichotomous_adjusted.txt: GWAS results with p-value correction using the Bonferroni method.
+How to Run
+Ensure that your genotype and phenotype data files are ready and in the correct format.
 
-LD analysis results:
+Make the script executable and run it:
 
-ld_results.blocks: Linkage disequilibrium blocks for the filtered genotype data.
+For cluster systems, use the provided job submission command.
 
-4. Post-Processing
-Once the script has completed:
+For local execution, simply run the script.
 
-You can check the GWAS results for significant SNPs.
+Output
+GWAS Results: The script generates raw GWAS results for both dichotomous and quantitative phenotypes. It also produces Bonferroni-adjusted results for multiple testing correction.
 
-The LD analysis will identify linked SNPs and their respective blocks.
+LD Results: The analysis identifies and saves the LD blocks for the SNPs.
 
-For visualization, use R to generate plots (e.g., Manhattan plots, QQ plots) to interpret the GWAS results.
