@@ -1,4 +1,3 @@
-GWAS and LD Analysis
 This repository contains scripts to perform Genome-Wide Association Studies (GWAS) and Linkage Disequilibrium (LD) analysis on genetic data. The analysis covers both dichotomous (binary) and quantitative phenotypes. The script applies filtering based on Hardy-Weinberg Equilibrium (HWE) and missingness results before running the main analyses.
 
 Prerequisites
