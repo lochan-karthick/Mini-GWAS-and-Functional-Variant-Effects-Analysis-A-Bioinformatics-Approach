@@ -7,40 +7,40 @@ library(data.table)
 #for dichotomous
 
 #for missingness in dichotomous chr1:
-imiss_dichotomous_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr1/dichotomous_missing/missing_output.imiss", header = TRUE)
+imiss_dichotomous_chr1 = read.table("dichotomous_missing/missing_output.imiss", header = TRUE)
 head(imiss_dichotomous_chr1)
 hist(imiss_dichotomous_chr1$F_MISS, breaks = 20, col = "skyblue",
      main = "Distribution of Individual Missingness",
      xlab = "Proportion of Missing Genotypes")
 
-lmiss_dichotomous_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr1/dichotomous_missing/missing_output.lmiss", header = TRUE)
+lmiss_dichotomous_chr1 = read.table("dichotomous_missing/missing_output.lmiss", header = TRUE)
 head(lmiss_dichotomous_chr1)
 hist(lmiss_dichotomous_chr1$F_MISS, breaks = 20, col = "salmon",
      main = "Distribution of SNP Missingness",
      xlab = "Proportion of Missing Genotypes per SNP")
 
 #for hardy in dichotomous chr1:
-hwe_dichotomous_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr1/dichotomous_hwe/hardy_output_chr1.hwe", header = TRUE)
+hwe_dichotomous_chr1 = read.table("dichotomous_hwe/hardy_output_chr1.hwe", header = TRUE)
 head(hwe_dichotomous_chr1)
 hist(hwe_dichotomous_chr1$P, breaks = 50, col = "orchid",
      main = "Distribution of HWE p-values",
      xlab = "HWE p-value")
 
 #for missingness in dichotomous chr2:
-imiss_dichotomous_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr2/dichotomous_missing/missing_output_chr2.imiss", header = TRUE)
+imiss_dichotomous_chr2 = read.table("dichotomous_missing/missing_output_chr2.imiss", header = TRUE)
 head(imiss_dichotomous_chr2)
 hist(imiss_dichotomous_chr2$F_MISS, breaks = 20, col = "skyblue",
      main = "Distribution of Individual Missingness",
      xlab = "Proportion of Missing Genotypes")
 
-lmiss_dichotomous_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr2/dichotomous_missing/missing_output_chr2.lmiss", header = TRUE)
+lmiss_dichotomous_chr2 = read.table("dichotomous_missing/missing_output_chr2.lmiss", header = TRUE)
 head(lmiss_dichotomous_chr2)
 hist(lmiss_dichotomous_chr2$F_MISS, breaks = 20, col = "salmon",
      main = "Distribution of SNP Missingness",
      xlab = "Proportion of Missing Genotypes per SNP")
 
 #for hardy in dichotomous chr2:
-hwe_dichotomous_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr2/dichotomous_hwe/hardy_output_chr2.hwe", header = TRUE)
+hwe_dichotomous_chr2 = read.table("dichotomous_hwe/hardy_output_chr2.hwe", header = TRUE)
 head(hwe_dichotomous_chr2)
 hist(hwe_dichotomous_chr2$P, breaks = 50, col = "orchid",
      main = "Distribution of HWE p-values",
@@ -51,40 +51,40 @@ hist(hwe_dichotomous_chr2$P, breaks = 50, col = "orchid",
 #for quantitative
 
 #for missingness in quantitative chr1:
-imiss_quantitative_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr1/quantitative_missing/missing_output_chr1.imiss", header = TRUE)
+imiss_quantitative_chr1 = read.table("quantitative_missing/missing_output_chr1.imiss", header = TRUE)
 head(imiss_quantitative_chr1)
 hist(imiss_quantitative_chr1$F_MISS, breaks = 20, col = "skyblue",
      main = "Distribution of Individual Missingness",
      xlab = "Proportion of Missing Genotypes")
 
-lmiss_quantitative_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr1/quantitative_missing/missing_output_chr1.lmiss", header = TRUE)
+lmiss_quantitative_chr1 = read.table("quantitative_missing/missing_output_chr1.lmiss", header = TRUE)
 head(lmiss_quantitative_chr1)
 hist(lmiss_quantitative_chr1$F_MISS, breaks = 20, col = "salmon",
      main = "Distribution of SNP Missingness",
      xlab = "Proportion of Missing Genotypes per SNP")
 
 #for hardy in quantitative chr1:
-hwe_quantitative_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr1/quantitative_hwe/hardy_output_chr1.hwe", header = TRUE)
+hwe_quantitative_chr1 = read.table("quantitative_hwe/hardy_output_chr1.hwe", header = TRUE)
 head(hwe_quantitative_chr1)
 hist(hwe_quantitative_chr1$P, breaks = 50, col = "orchid",
      main = "Distribution of HWE p-values",
      xlab = "HWE p-value")
 
 #for missingness in quantitative chr2:
-imiss_quantitative_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr2/quantitative_missing/missing_output_chr2.imiss", header = TRUE)
+imiss_quantitative_chr2 = read.table("quantitative_missing/missing_output_chr2.imiss", header = TRUE)
 head(imiss_quantitative_chr2)
 hist(imiss_quantitative_chr2$F_MISS, breaks = 20, col = "skyblue",
      main = "Distribution of Individual Missingness",
      xlab = "Proportion of Missing Genotypes")
 
-lmiss_quantitative_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr2/quantitative_missing/missing_output_chr2.lmiss", header = TRUE)
+lmiss_quantitative_chr2 = read.table("quantitative_missing/missing_output_chr2.lmiss", header = TRUE)
 head(lmiss_quantitative_chr2)
 hist(lmiss_quantitative_chr2$F_MISS, breaks = 20, col = "salmon",
      main = "Distribution of SNP Missingness",
      xlab = "Proportion of Missing Genotypes per SNP")
 
 #for hardy in quantitative chr2:
-hwe_quantitative_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr2/quantitative_hwe/hardy_output_chr2.hwe", header = TRUE)
+hwe_quantitative_chr2 = read.table("quantitative_hwe/hardy_output_chr2.hwe", header = TRUE)
 head(hwe_quantitative_chr2)
 hist(hwe_quantitative_chr2$P, breaks = 50, col = "orchid",
      main = "Distribution of HWE p-values",
@@ -96,7 +96,7 @@ hist(hwe_quantitative_chr2$P, breaks = 50, col = "orchid",
 #For chr1:
 
 #loading the table
-gwas_dichotomous_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr1/dichotomous_gwas/gwas_results_chr1.assoc.logistic",
+gwas_dichotomous_chr1 = read.table("dichotomous_gwas/gwas_results_chr1.assoc.logistic",
                                    header = TRUE)
 
 #understanding table struct:
@@ -127,7 +127,7 @@ manhattan(gwas_dichotomous_chr1, chr = "CHR", bp = "BP", p = "P", snp = "SNP",
 #For chr2:
 
 #loading the table
-gwas_dichotomous_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/dichotomous_chr2/dichotomous_gwas/gwas_results_chr2.assoc.logistic",
+gwas_dichotomous_chr2 = read.table("dichotomous_gwas/gwas_results_chr2.assoc.logistic",
                                    header = TRUE)
 
 #understanding table struct:
@@ -161,7 +161,7 @@ manhattan(gwas_dichotomous_chr2, chr = "CHR", bp = "BP", p = "P", snp = "SNP",
 #For chr1:
 
 #loading the table
-gwas_quantitative_chr1 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr1/quantitative_gwas/gwas_results_chr1.assoc.linear",
+gwas_quantitative_chr1 = read.table("quantitative_gwas/gwas_results_chr1.assoc.linear",
                                    header = TRUE)
 
 #understanding table struct:
@@ -192,7 +192,7 @@ manhattan(gwas_quantitative_chr1, chr = "CHR", bp = "BP", p = "P", snp = "SNP",
 #For chr2:
 
 #loading the table
-gwas_quantitative_chr2 = read.table("/Users/lochan.karthick/Desktop/IDCGV_assessment/IDCGV_assessment/quantitative_chr2/quantitative_gwas/gwas_results_chr2.assoc.linear",
+gwas_quantitative_chr2 = read.table("quantitative_gwas/gwas_results_chr2.assoc.linear",
                                    header = TRUE)
 
 #understanding table struct:
